@@ -3,11 +3,11 @@ pragma solidity >=0.5.0;
 contract Will {
     uint private amount;
     uint private deadline;
-    string private attorneyPass;
-    string private receiverPass;
     address private attorney;
     address payable private jack;
     address payable private ngo;
+  	bytes32 private attorneyPass;
+    bytes32 private receiverPass;
     
     // Ensure the caller is Jack.
     modifier jackOnly {
@@ -28,11 +28,11 @@ contract Will {
      * @param _attorneyPass The attorney's password part.
      * @param _receiverPpass Jack or the NGO's password part.
      */
-    constructor(uint _amount, uint _deadline, string memory _attorneyPass, string memory _receiverPpass) payable public {
+    constructor(uint _amount, uint _deadline, bytes32 _attorneyPass, bytes32 _receiverPass) payable public {
         amount = _amount;
         deadline = _deadline;
         attorneyPass = _attorneyPass;
-        receiverPass = _receiverPpass;
+        receiverPass = _receiverPass;
         // TODO: Set up addresses.
     }
     
@@ -41,7 +41,7 @@ contract Will {
      * @dev Only jack can perform this operation.
      */
     function withdraw() jackOnly public {
-        if (before(deadline) && valid(receiverPass)) {
+        if (before(deadline) && checkPass()) {
             jack.transfer(amount);
         }
     }
@@ -52,7 +52,7 @@ contract Will {
      * @dev Only the NGO can perform this operation.
      */
     function cancelWithdrawal() ngoOnly public {
-        if (!before(deadline) && valid(receiverPass)) {
+        if (!before(deadline) && checkPass()) {
             ngo.transfer(amount);
             selfdestruct(ngo);
         }
@@ -73,9 +73,7 @@ contract Will {
      * @return True if the given password part combined with the attorney's
      * password part matches the master password.
      */
-    function valid(string _receiverPass) view private returns(bool) {
-        // TODO: check valid password
-        // attorneyPass + _receiverPass == masterPass
-        return false;
+    function checkPass() view private returns(bool) {
+        return attorneyPass == "hello" && receiverPass == "world";
     }
 }
