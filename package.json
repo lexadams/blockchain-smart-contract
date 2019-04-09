@@ -7,9 +7,15 @@
     "test": "test"
   },
   "dependencies": {
-    "truffle": "^5.0.12"
+    "jquery": "^3.3.1",
+    "truffle": "^5.0.12",
+    "truffle-contract": "^4.0.11",
+    "web3": "^1.0.0-beta.52",
+    "webpack": "^2.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "file-loader": "^3.0.1"
+  },
   "scripts": {
     "test": "mocha"
   },

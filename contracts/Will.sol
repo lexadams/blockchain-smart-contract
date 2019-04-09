@@ -65,7 +65,7 @@ contract Will {
      * @dev Only jack can perform this operation.
      */
     function withdraw() jackOnly beforeDeadline validPass public {
-    	jack.transfer(amount);
+        jack.transfer(amount);
     }
     
     /**

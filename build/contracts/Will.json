@@ -43,12 +43,12 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"withdraw\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"cancelWithdraw\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"_amount\",\"type\":\"uint256\"},{\"name\":\"_deadline\",\"type\":\"uint256\"},{\"name\":\"_attorneyPass\",\"type\":\"bytes32\"},{\"name\":\"_recipientPass\",\"type\":\"bytes32\"}],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"constructor\"}],\"devdoc\":{\"author\":\"Mason Walton, Michael Christian, Lex Adams\",\"methods\":{\"cancelWithdraw()\":{\"details\":\"Only the NGO can perform this operation.\"},\"constructor\":{\"params\":{\"_amount\":\"The amount of ethers to transfer.\",\"_attorneyPass\":\"The attorney's password part.\",\"_deadline\":\"The deadline by which Jack must withdraw the ethers.\",\"_recipientPass\":\"Jack or the NGO's password part.\"}},\"withdraw()\":{\"details\":\"Only jack can perform this operation.\"}}},\"userdoc\":{\"methods\":{\"cancelWithdraw()\":{\"notice\":\"Transfers the account balance to NGO and cancels the contract only after the deadline has passed.\"},\"constructor\":\"Create a new Will contract.\",\"withdraw()\":{\"notice\":\"Transfers the account balance to Jack only is the deadline has not passed.\"}},\"notice\":\"CSC 4700 Project 1\"}},\"settings\":{\"compilationTarget\":{\"/Users/mwalto7/VSCodeProjects/blockchain/contracts/Will.sol\":\"Will\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/mwalto7/VSCodeProjects/blockchain/contracts/Will.sol\":{\"keccak256\":\"0x93640c263c9d79a09f63e43446884efb220b510a4c069981db6af099caf9a97d\",\"urls\":[\"bzzr://6f4eae4534a2c8dae5b7df0025c832c2315a7ff83d64fc763f1bf77df4136658\"]}},\"version\":1}",
-  "bytecode": "0x60806040526040516080806108038339810180604052608081101561002357600080fd5b81019080805190602001909291908051906020019092919080519060200190929190805190602001909291905050508360008190555082600181905550816005819055508060068190555050505050610782806100816000396000f3fe60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633ccfd60b1461005157806384b7682414610068575b600080fd5b34801561005d57600080fd5b5061006661007f565b005b34801561007457600080fd5b5061007d6103ce565b005b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141515610144576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f5065726d697373696f6e2044656e6965643a204d757374206265204a61636b0081525060200191505060405180910390fd5b426001541115156101e3576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001807f5065726d697373696f6e2044656e6965643a20416674657220646561646c696e81526020017f650000000000000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b7f68656c6c6f0000000000000000000000000000000000000000000000000000006005541415156102a2576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260318152602001807f5065726d697373696f6e2044656e6965643a20496e76616c6964206174746f7281526020017f6e65792070617373776f7264207061727400000000000000000000000000000081525060400191505060405180910390fd5b7f776f726c64000000000000000000000000000000000000000000000000000000600654141515610361576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260328152602001807f5065726d697373696f6e2044656e6965643a20496e76616c696420726563697081526020017f69656e742070617373776f72642070617274000000000000000000000000000081525060400191505060405180910390fd5b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc6000549081150290604051600060405180830381858888f193505050501580156103cb573d6000803e3d6000fd5b50565b600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141515610493576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601e8152602001807f5065726d697373696f6e2044656e6965643a204d757374206265204e474f000081525060200191505060405180910390fd5b60015442111515610532576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260228152602001807f5065726d697373696f6e2044656e6965643a204265666f726520646561646c6981526020017f6e6500000000000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b7f68656c6c6f0000000000000000000000000000000000000000000000000000006005541415156105f1576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260318152602001807f5065726d697373696f6e2044656e6965643a20496e76616c6964206174746f7281526020017f6e65792070617373776f7264207061727400000000000000000000000000000081525060400191505060405180910390fd5b7f776f726c640000000000000000000000000000000000000000000000000000006006541415156106b0576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260328152602001807f5065726d697373696f6e2044656e6965643a20496e76616c696420726563697081526020017f69656e742070617373776f72642070617274000000000000000000000000000081525060400191505060405180910390fd5b600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc6000549081150290604051600060405180830381858888f1935050505015801561071a573d6000803e3d6000fd5b50600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16fffea165627a7a72305820cf7730f491aaed4283bfcb561894612896e8883b5116bc8e4a1b26067c284a440029",
-  "deployedBytecode": "0x60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633ccfd60b1461005157806384b7682414610068575b600080fd5b34801561005d57600080fd5b5061006661007f565b005b34801561007457600080fd5b5061007d6103ce565b005b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141515610144576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f5065726d697373696f6e2044656e6965643a204d757374206265204a61636b0081525060200191505060405180910390fd5b426001541115156101e3576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001807f5065726d697373696f6e2044656e6965643a20416674657220646561646c696e81526020017f650000000000000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b7f68656c6c6f0000000000000000000000000000000000000000000000000000006005541415156102a2576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260318152602001807f5065726d697373696f6e2044656e6965643a20496e76616c6964206174746f7281526020017f6e65792070617373776f7264207061727400000000000000000000000000000081525060400191505060405180910390fd5b7f776f726c64000000000000000000000000000000000000000000000000000000600654141515610361576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260328152602001807f5065726d697373696f6e2044656e6965643a20496e76616c696420726563697081526020017f69656e742070617373776f72642070617274000000000000000000000000000081525060400191505060405180910390fd5b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc6000549081150290604051600060405180830381858888f193505050501580156103cb573d6000803e3d6000fd5b50565b600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141515610493576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601e8152602001807f5065726d697373696f6e2044656e6965643a204d757374206265204e474f000081525060200191505060405180910390fd5b60015442111515610532576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260228152602001807f5065726d697373696f6e2044656e6965643a204265666f726520646561646c6981526020017f6e6500000000000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b7f68656c6c6f0000000000000000000000000000000000000000000000000000006005541415156105f1576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260318152602001807f5065726d697373696f6e2044656e6965643a20496e76616c6964206174746f7281526020017f6e65792070617373776f7264207061727400000000000000000000000000000081525060400191505060405180910390fd5b7f776f726c640000000000000000000000000000000000000000000000000000006006541415156106b0576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260328152602001807f5065726d697373696f6e2044656e6965643a20496e76616c696420726563697081526020017f69656e742070617373776f72642070617274000000000000000000000000000081525060400191505060405180910390fd5b600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc6000549081150290604051600060405180830381858888f1935050505015801561071a573d6000803e3d6000fd5b50600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16fffea165627a7a72305820cf7730f491aaed4283bfcb561894612896e8883b5116bc8e4a1b26067c284a440029",
-  "sourceMap": "113:2548:1:-;;;1808:280;;;;;;;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;1808:280:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1931:7;1922:6;:16;;;;1959:9;1948:8;:20;;;;1993:13;1978:12;:28;;;;2032:14;2016:13;:30;;;;1808:280;;;;113:2548;;;;;;",
-  "deployedSourceMap": "113:2548:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2246:96;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2246:96:1;;;;;;2533:126;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2533:126:1;;;;;;2246:96;701:4;;;;;;;;;;;687:18;;:10;:18;;;679:62;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1006:3;995:8;;:14;987:60;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1310:23;:12;;:23;1302:85;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1404:24;:13;;:24;1396:87;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2314:4;;;;;;;;;;;:13;;:21;2328:6;;2314:21;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;2314:21:1;2246:96::o;2533:126::-;850:3;;;;;;;;;;;836:17;;:10;:17;;;828:60;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1158:8;;1152:3;:14;1144:61;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1310:23;:12;;:23;1302:85;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1404:24;:13;;:24;1396:87;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2605:3;;;;;;;;;;;:12;;:20;2618:6;;2605:20;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;2605:20:1;2648:3;;;;;;;;;;;2635:17;;",
-  "source": "pragma solidity >=0.5.0;\n\n/**\n * CSC 4700 Project 1\n *\n * @author Mason Walton, Michael Christian, Lex Adams\n */\ncontract Will {\n    uint private amount;           // The amount of ether to transfer to the receiver.\n    uint private deadline;         // The deadline for Jack to withdraw the ethers.\n    address private attorney;      // The attorney's address.\n    address payable private jack;  // Jack's address.\n    address payable private ngo;   // The NGO's address.\n  \tbytes32 private attorneyPass;  // The attorney's password part.\n    bytes32 private recipientPass; // The recipient's password part.\n    \n    // Ensure the caller is Jack.\n    modifier jackOnly {\n      \trequire(msg.sender == jack, \"Permission Denied: Must be Jack\");\n        _;\n    }\n    \n    // Ensure the caller is NGO.\n    modifier ngoOnly {\n      \trequire(msg.sender == ngo, \"Permission Denied: Must be NGO\");\n        _;\n    }\n  \n  \t// Ensure it is before the deadline.\n    modifier beforeDeadline {\n      \trequire(deadline > now, \"Permission Denied: After deadline\");\n        _;\n    }\n  \n  \t// Ensure it is after the deadline.\n    modifier afterDeadline {\n      \trequire(now > deadline, \"Permission Denied: Before deadline\");\n        _;\n    }\n  \n  \t// Ensure the password parts are valid.\n    modifier validPass {\n      \trequire(attorneyPass == \"hello\", \"Permission Denied: Invalid attorney password part\");\n      \trequire(recipientPass == \"world\", \"Permission Denied: Invalid recipient password part\");\n    \t_;\n    }\n\n    /**\n     * Create a new Will contract.\n     * @param _amount The amount of ethers to transfer.\n     * @param _deadline The deadline by which Jack must withdraw the ethers.\n     * @param _attorneyPass The attorney's password part.\n     * @param _recipientPass Jack or the NGO's password part.\n     */\n    constructor(uint _amount, uint _deadline, bytes32 _attorneyPass, bytes32 _recipientPass) payable public {\n        amount = _amount;\n        deadline = _deadline;\n        attorneyPass = _attorneyPass;\n        recipientPass = _recipientPass;\n        // TODO: Set up addresses.\n    }\n    \n    /**\n     * Transfers the account balance to Jack only is the deadline has not passed.\n     * @dev Only jack can perform this operation.\n     */\n    function withdraw() jackOnly beforeDeadline validPass public {\n    \tjack.transfer(amount);\n    }\n    \n    /**\n     * Transfers the account balance to NGO and cancels the contract\n     * only after the deadline has passed.\n     * @dev Only the NGO can perform this operation.\n     */\n    function cancelWithdraw() ngoOnly afterDeadline validPass public {\n    \tngo.transfer(amount);\n        selfdestruct(ngo);\n    }\n}\n",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"withdraw\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"cancelWithdraw\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"_amount\",\"type\":\"uint256\"},{\"name\":\"_deadline\",\"type\":\"uint256\"},{\"name\":\"_attorneyPass\",\"type\":\"bytes32\"},{\"name\":\"_recipientPass\",\"type\":\"bytes32\"}],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"constructor\"}],\"devdoc\":{\"author\":\"Mason Walton, Michael Christian, Lex Adams\",\"methods\":{\"cancelWithdraw()\":{\"details\":\"Only the NGO can perform this operation.\"},\"constructor\":{\"params\":{\"_amount\":\"The amount of ethers to transfer.\",\"_attorneyPass\":\"The attorney's password part.\",\"_deadline\":\"The deadline by which Jack must withdraw the ethers.\",\"_recipientPass\":\"Jack or the NGO's password part.\"}},\"withdraw()\":{\"details\":\"Only jack can perform this operation.\"}}},\"userdoc\":{\"methods\":{\"cancelWithdraw()\":{\"notice\":\"Transfers the account balance to NGO and cancels the contract only after the deadline has passed.\"},\"constructor\":\"Create a new Will contract.\",\"withdraw()\":{\"notice\":\"Transfers the account balance to Jack only is the deadline has not passed.\"}},\"notice\":\"CSC 4700 Project 1\"}},\"settings\":{\"compilationTarget\":{\"/Users/mwalto7/VSCodeProjects/blockchain/contracts/Will.sol\":\"Will\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/mwalto7/VSCodeProjects/blockchain/contracts/Will.sol\":{\"keccak256\":\"0x2fce97be5e826c608facaf04cdf4feaf7a0350aa710aef8b397eccea4dec981b\",\"urls\":[\"bzzr://302ef0a12efb16445384ef8723db104706e23a4cabb4b4d0a7d4701e7a931635\"]}},\"version\":1}",
+  "bytecode": "0x60806040526040516080806108038339810180604052608081101561002357600080fd5b81019080805190602001909291908051906020019092919080519060200190929190805190602001909291905050508360008190555082600181905550816005819055508060068190555050505050610782806100816000396000f3fe60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633ccfd60b1461005157806384b7682414610068575b600080fd5b34801561005d57600080fd5b5061006661007f565b005b34801561007457600080fd5b5061007d6103ce565b005b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141515610144576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f5065726d697373696f6e2044656e6965643a204d757374206265204a61636b0081525060200191505060405180910390fd5b426001541115156101e3576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001807f5065726d697373696f6e2044656e6965643a20416674657220646561646c696e81526020017f650000000000000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b7f68656c6c6f0000000000000000000000000000000000000000000000000000006005541415156102a2576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260318152602001807f5065726d697373696f6e2044656e6965643a20496e76616c6964206174746f7281526020017f6e65792070617373776f7264207061727400000000000000000000000000000081525060400191505060405180910390fd5b7f776f726c64000000000000000000000000000000000000000000000000000000600654141515610361576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260328152602001807f5065726d697373696f6e2044656e6965643a20496e76616c696420726563697081526020017f69656e742070617373776f72642070617274000000000000000000000000000081525060400191505060405180910390fd5b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc6000549081150290604051600060405180830381858888f193505050501580156103cb573d6000803e3d6000fd5b50565b600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141515610493576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601e8152602001807f5065726d697373696f6e2044656e6965643a204d757374206265204e474f000081525060200191505060405180910390fd5b60015442111515610532576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260228152602001807f5065726d697373696f6e2044656e6965643a204265666f726520646561646c6981526020017f6e6500000000000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b7f68656c6c6f0000000000000000000000000000000000000000000000000000006005541415156105f1576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260318152602001807f5065726d697373696f6e2044656e6965643a20496e76616c6964206174746f7281526020017f6e65792070617373776f7264207061727400000000000000000000000000000081525060400191505060405180910390fd5b7f776f726c640000000000000000000000000000000000000000000000000000006006541415156106b0576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260328152602001807f5065726d697373696f6e2044656e6965643a20496e76616c696420726563697081526020017f69656e742070617373776f72642070617274000000000000000000000000000081525060400191505060405180910390fd5b600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc6000549081150290604051600060405180830381858888f1935050505015801561071a573d6000803e3d6000fd5b50600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16fffea165627a7a72305820a114ee8f951a3e9c18d2d1e4f6dba45982aa9231378b88dbc1f81929a35b5e6c0029",
+  "deployedBytecode": "0x60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633ccfd60b1461005157806384b7682414610068575b600080fd5b34801561005d57600080fd5b5061006661007f565b005b34801561007457600080fd5b5061007d6103ce565b005b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141515610144576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f5065726d697373696f6e2044656e6965643a204d757374206265204a61636b0081525060200191505060405180910390fd5b426001541115156101e3576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001807f5065726d697373696f6e2044656e6965643a20416674657220646561646c696e81526020017f650000000000000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b7f68656c6c6f0000000000000000000000000000000000000000000000000000006005541415156102a2576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260318152602001807f5065726d697373696f6e2044656e6965643a20496e76616c6964206174746f7281526020017f6e65792070617373776f7264207061727400000000000000000000000000000081525060400191505060405180910390fd5b7f776f726c64000000000000000000000000000000000000000000000000000000600654141515610361576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260328152602001807f5065726d697373696f6e2044656e6965643a20496e76616c696420726563697081526020017f69656e742070617373776f72642070617274000000000000000000000000000081525060400191505060405180910390fd5b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc6000549081150290604051600060405180830381858888f193505050501580156103cb573d6000803e3d6000fd5b50565b600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141515610493576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601e8152602001807f5065726d697373696f6e2044656e6965643a204d757374206265204e474f000081525060200191505060405180910390fd5b60015442111515610532576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260228152602001807f5065726d697373696f6e2044656e6965643a204265666f726520646561646c6981526020017f6e6500000000000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b7f68656c6c6f0000000000000000000000000000000000000000000000000000006005541415156105f1576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260318152602001807f5065726d697373696f6e2044656e6965643a20496e76616c6964206174746f7281526020017f6e65792070617373776f7264207061727400000000000000000000000000000081525060400191505060405180910390fd5b7f776f726c640000000000000000000000000000000000000000000000000000006006541415156106b0576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260328152602001807f5065726d697373696f6e2044656e6965643a20496e76616c696420726563697081526020017f69656e742070617373776f72642070617274000000000000000000000000000081525060400191505060405180910390fd5b600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc6000549081150290604051600060405180830381858888f1935050505015801561071a573d6000803e3d6000fd5b50600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16fffea165627a7a72305820a114ee8f951a3e9c18d2d1e4f6dba45982aa9231378b88dbc1f81929a35b5e6c0029",
+  "sourceMap": "113:2551:1:-;;;1808:280;;;;;;;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;1808:280:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1931:7;1922:6;:16;;;;1959:9;1948:8;:20;;;;1993:13;1978:12;:28;;;;2032:14;2016:13;:30;;;;1808:280;;;;113:2551;;;;;;",
+  "deployedSourceMap": "113:2551:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2246:99;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2246:99:1;;;;;;2536:126;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2536:126:1;;;;;;2246:99;701:4;;;;;;;;;;;687:18;;:10;:18;;;679:62;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1006:3;995:8;;:14;987:60;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1310:23;:12;;:23;1302:85;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1404:24;:13;;:24;1396:87;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2317:4;;;;;;;;;;;:13;;:21;2331:6;;2317:21;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;2317:21:1;2246:99::o;2536:126::-;850:3;;;;;;;;;;;836:17;;:10;:17;;;828:60;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1158:8;;1152:3;:14;1144:61;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1310:23;:12;;:23;1302:85;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1404:24;:13;;:24;1396:87;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2608:3;;;;;;;;;;;:12;;:20;2621:6;;2608:20;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;2608:20:1;2651:3;;;;;;;;;;;2638:17;;",
+  "source": "pragma solidity >=0.5.0;\n\n/**\n * CSC 4700 Project 1\n *\n * @author Mason Walton, Michael Christian, Lex Adams\n */\ncontract Will {\n    uint private amount;           // The amount of ether to transfer to the receiver.\n    uint private deadline;         // The deadline for Jack to withdraw the ethers.\n    address private attorney;      // The attorney's address.\n    address payable private jack;  // Jack's address.\n    address payable private ngo;   // The NGO's address.\n  \tbytes32 private attorneyPass;  // The attorney's password part.\n    bytes32 private recipientPass; // The recipient's password part.\n    \n    // Ensure the caller is Jack.\n    modifier jackOnly {\n      \trequire(msg.sender == jack, \"Permission Denied: Must be Jack\");\n        _;\n    }\n    \n    // Ensure the caller is NGO.\n    modifier ngoOnly {\n      \trequire(msg.sender == ngo, \"Permission Denied: Must be NGO\");\n        _;\n    }\n  \n  \t// Ensure it is before the deadline.\n    modifier beforeDeadline {\n      \trequire(deadline > now, \"Permission Denied: After deadline\");\n        _;\n    }\n  \n  \t// Ensure it is after the deadline.\n    modifier afterDeadline {\n      \trequire(now > deadline, \"Permission Denied: Before deadline\");\n        _;\n    }\n  \n  \t// Ensure the password parts are valid.\n    modifier validPass {\n      \trequire(attorneyPass == \"hello\", \"Permission Denied: Invalid attorney password part\");\n      \trequire(recipientPass == \"world\", \"Permission Denied: Invalid recipient password part\");\n    \t_;\n    }\n\n    /**\n     * Create a new Will contract.\n     * @param _amount The amount of ethers to transfer.\n     * @param _deadline The deadline by which Jack must withdraw the ethers.\n     * @param _attorneyPass The attorney's password part.\n     * @param _recipientPass Jack or the NGO's password part.\n     */\n    constructor(uint _amount, uint _deadline, bytes32 _attorneyPass, bytes32 _recipientPass) payable public {\n        amount = _amount;\n        deadline = _deadline;\n        attorneyPass = _attorneyPass;\n        recipientPass = _recipientPass;\n        // TODO: Set up addresses.\n    }\n    \n    /**\n     * Transfers the account balance to Jack only is the deadline has not passed.\n     * @dev Only jack can perform this operation.\n     */\n    function withdraw() jackOnly beforeDeadline validPass public {\n        jack.transfer(amount);\n    }\n    \n    /**\n     * Transfers the account balance to NGO and cancels the contract\n     * only after the deadline has passed.\n     * @dev Only the NGO can perform this operation.\n     */\n    function cancelWithdraw() ngoOnly afterDeadline validPass public {\n    \tngo.transfer(amount);\n        selfdestruct(ngo);\n    }\n}\n",
   "sourcePath": "/Users/mwalto7/VSCodeProjects/blockchain/contracts/Will.sol",
   "ast": {
     "absolutePath": "/Users/mwalto7/VSCodeProjects/blockchain/contracts/Will.sol",
@@ -1433,7 +1433,7 @@
             "body": {
               "id": 179,
               "nodeType": "Block",
-              "src": "2307:35:1",
+              "src": "2307:38:1",
               "statements": [
                 {
                   "expression": {
@@ -1446,7 +1446,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 60,
-                        "src": "2328:6:1",
+                        "src": "2331:6:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1467,7 +1467,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 66,
-                        "src": "2314:4:1",
+                        "src": "2317:4:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -1481,7 +1481,7 @@
                       "memberName": "transfer",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "2314:13:1",
+                      "src": "2317:13:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256)"
@@ -1495,7 +1495,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2314:21:1",
+                    "src": "2317:21:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -1503,7 +1503,7 @@
                   },
                   "id": 178,
                   "nodeType": "ExpressionStatement",
-                  "src": "2314:21:1"
+                  "src": "2317:21:1"
                 }
               ]
             },
@@ -1585,7 +1585,7 @@
               "src": "2307:0:1"
             },
             "scope": 201,
-            "src": "2246:96:1",
+            "src": "2246:99:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -1594,7 +1594,7 @@
             "body": {
               "id": 199,
               "nodeType": "Block",
-              "src": "2598:61:1",
+              "src": "2601:61:1",
               "statements": [
                 {
                   "expression": {
@@ -1607,7 +1607,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 60,
-                        "src": "2618:6:1",
+                        "src": "2621:6:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1628,7 +1628,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 68,
-                        "src": "2605:3:1",
+                        "src": "2608:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -1642,7 +1642,7 @@
                       "memberName": "transfer",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "2605:12:1",
+                      "src": "2608:12:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256)"
@@ -1656,7 +1656,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2605:20:1",
+                    "src": "2608:20:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -1664,7 +1664,7 @@
                   },
                   "id": 194,
                   "nodeType": "ExpressionStatement",
-                  "src": "2605:20:1"
+                  "src": "2608:20:1"
                 },
                 {
                   "expression": {
@@ -1677,7 +1677,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 68,
-                        "src": "2648:3:1",
+                        "src": "2651:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -1696,7 +1696,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 224,
-                      "src": "2635:12:1",
+                      "src": "2638:12:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_selfdestruct_nonpayable$_t_address_payable_$returns$__$",
                         "typeString": "function (address payable)"
@@ -1710,7 +1710,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2635:17:1",
+                    "src": "2638:17:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -1718,7 +1718,7 @@
                   },
                   "id": 198,
                   "nodeType": "ExpressionStatement",
-                  "src": "2635:17:1"
+                  "src": "2638:17:1"
                 }
               ]
             },
@@ -1737,14 +1737,14 @@
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
                   "referencedDeclaration": 96,
-                  "src": "2559:7:1",
+                  "src": "2562:7:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "2559:7:1"
+                "src": "2562:7:1"
               },
               {
                 "arguments": null,
@@ -1756,14 +1756,14 @@
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
                   "referencedDeclaration": 118,
-                  "src": "2567:13:1",
+                  "src": "2570:13:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "2567:13:1"
+                "src": "2570:13:1"
               },
               {
                 "arguments": null,
@@ -1775,14 +1775,14 @@
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
                   "referencedDeclaration": 136,
-                  "src": "2581:9:1",
+                  "src": "2584:9:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "2581:9:1"
+                "src": "2584:9:1"
               }
             ],
             "name": "cancelWithdraw",
@@ -1791,26 +1791,26 @@
               "id": 181,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2556:2:1"
+              "src": "2559:2:1"
             },
             "returnParameters": {
               "id": 188,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2598:0:1"
+              "src": "2601:0:1"
             },
             "scope": 201,
-            "src": "2533:126:1",
+            "src": "2536:126:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 202,
-        "src": "113:2548:1"
+        "src": "113:2551:1"
       }
     ],
-    "src": "0:2662:1"
+    "src": "0:2665:1"
   },
   "legacyAST": {
     "absolutePath": "/Users/mwalto7/VSCodeProjects/blockchain/contracts/Will.sol",
@@ -3195,7 +3195,7 @@
             "body": {
               "id": 179,
               "nodeType": "Block",
-              "src": "2307:35:1",
+              "src": "2307:38:1",
               "statements": [
                 {
                   "expression": {
@@ -3208,7 +3208,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 60,
-                        "src": "2328:6:1",
+                        "src": "2331:6:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -3229,7 +3229,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 66,
-                        "src": "2314:4:1",
+                        "src": "2317:4:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -3243,7 +3243,7 @@
                       "memberName": "transfer",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "2314:13:1",
+                      "src": "2317:13:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256)"
@@ -3257,7 +3257,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2314:21:1",
+                    "src": "2317:21:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -3265,7 +3265,7 @@
                   },
                   "id": 178,
                   "nodeType": "ExpressionStatement",
-                  "src": "2314:21:1"
+                  "src": "2317:21:1"
                 }
               ]
             },
@@ -3347,7 +3347,7 @@
               "src": "2307:0:1"
             },
             "scope": 201,
-            "src": "2246:96:1",
+            "src": "2246:99:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -3356,7 +3356,7 @@
             "body": {
               "id": 199,
               "nodeType": "Block",
-              "src": "2598:61:1",
+              "src": "2601:61:1",
               "statements": [
                 {
                   "expression": {
@@ -3369,7 +3369,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 60,
-                        "src": "2618:6:1",
+                        "src": "2621:6:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -3390,7 +3390,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 68,
-                        "src": "2605:3:1",
+                        "src": "2608:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -3404,7 +3404,7 @@
                       "memberName": "transfer",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "2605:12:1",
+                      "src": "2608:12:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256)"
@@ -3418,7 +3418,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2605:20:1",
+                    "src": "2608:20:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -3426,7 +3426,7 @@
                   },
                   "id": 194,
                   "nodeType": "ExpressionStatement",
-                  "src": "2605:20:1"
+                  "src": "2608:20:1"
                 },
                 {
                   "expression": {
@@ -3439,7 +3439,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 68,
-                        "src": "2648:3:1",
+                        "src": "2651:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -3458,7 +3458,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 224,
-                      "src": "2635:12:1",
+                      "src": "2638:12:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_selfdestruct_nonpayable$_t_address_payable_$returns$__$",
                         "typeString": "function (address payable)"
@@ -3472,7 +3472,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2635:17:1",
+                    "src": "2638:17:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -3480,7 +3480,7 @@
                   },
                   "id": 198,
                   "nodeType": "ExpressionStatement",
-                  "src": "2635:17:1"
+                  "src": "2638:17:1"
                 }
               ]
             },
@@ -3499,14 +3499,14 @@
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
                   "referencedDeclaration": 96,
-                  "src": "2559:7:1",
+                  "src": "2562:7:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "2559:7:1"
+                "src": "2562:7:1"
               },
               {
                 "arguments": null,
@@ -3518,14 +3518,14 @@
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
                   "referencedDeclaration": 118,
-                  "src": "2567:13:1",
+                  "src": "2570:13:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "2567:13:1"
+                "src": "2570:13:1"
               },
               {
                 "arguments": null,
@@ -3537,14 +3537,14 @@
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
                   "referencedDeclaration": 136,
-                  "src": "2581:9:1",
+                  "src": "2584:9:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "2581:9:1"
+                "src": "2584:9:1"
               }
             ],
             "name": "cancelWithdraw",
@@ -3553,26 +3553,26 @@
               "id": 181,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2556:2:1"
+              "src": "2559:2:1"
             },
             "returnParameters": {
               "id": 188,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2598:0:1"
+              "src": "2601:0:1"
             },
             "scope": 201,
-            "src": "2533:126:1",
+            "src": "2536:126:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 202,
-        "src": "113:2548:1"
+        "src": "113:2551:1"
       }
     ],
-    "src": "0:2662:1"
+    "src": "0:2665:1"
   },
   "compiler": {
     "name": "solc",
@@ -3580,7 +3580,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.6",
-  "updatedAt": "2019-04-09T00:16:11.340Z",
+  "updatedAt": "2019-04-09T19:23:35.914Z",
   "devdoc": {
     "author": "Mason Walton, Michael Christian, Lex Adams",
     "methods": {
