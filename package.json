@@ -1,0 +1,26 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "Blockchain project 1",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "truffle": "^5.0.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mwalto7/blockchain-project.git"
+  },
+  "author": "Mason Walton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mwalto7/blockchain-project/issues"
+  },
+  "homepage": "https://github.com/mwalto7/blockchain-project#readme"
+}
