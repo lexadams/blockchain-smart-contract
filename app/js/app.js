@@ -3,10 +3,10 @@ const truffleContract = require("truffle-contract");
 const $ = require("jquery");
 
 // Not to forget our built contract
-const willJson = require("../../build/contracts/Will.json");
+const willJSON = require("../../build/contracts/Will.json");
 require("file-loader?name=../index.html!../index.html");
-import Web3 from 'web3';
 
+const Web3 = require('web3');
 // Supports Mist, and other wallets that provide 'web3'.
 if (typeof web3 !== 'undefined') {
   // Use the Mist/wallet/Metamask provider.
@@ -17,11 +17,22 @@ if (typeof web3 !== 'undefined') {
 }
 
 // Make a new contract object with the recepient's address.
-var Contract = new web3.eth.Contract(Will.json, document.getElementById('AccountAddress').value);
+const accountAddr = document.getElementById('AccountAddress').value;
+var WillContract = new web3.eth.Contract(willJSON.abi, accountAddr);
 
 // Deploy the contract with the deadline of 04/29/2019.
-Contract.deploy(web3.eth.accounts[1], web3.eth.accounts[2], web3.eth.accounts[3], 1000, 1556577099, document.getElementById('AttorneyPassword').value, document.getElementById('Password').value);
-
+WillContract.deploy({
+  data: willJSON.bytecode,
+  arguments: [
+    web3.eth.accounts[1],                              // Mr. Mark's account.
+    web3.eth.accounts[2],                              // The NGO's account.
+    web3.eth.accounts[3],                              // Jack's account.
+    1000,                                              // The amount of ether to transfer.
+    1556577099,                                        // Jack's withdrawal deadline unix timestamp (04/29/2019).
+    document.getElementById('AttorneyPassword').value, // The attorney's password part.
+    document.getElementById('Password').value          // Jack's password part.
+  ]
+});
 
 web3.eth.getTransactionReceiptMined = require("./utils.js");
 function sequentialPromise(promiseArray) {
@@ -58,16 +69,20 @@ web3.eth.getAccountsPromise = function () {
   });
 };
 
-const Will = truffleContract(willJson);
+const Will = truffleContract(willJSON);
 Will.setProvider(web3.currentProvider);
 window.addEventListener('load', function () {
-  //vote is button id, votefunc is the function that will be executed when button is pressed
-  $("button#will").click(willfunc);
+  $("button#withdraw").click(withdraw);
   return Will.deployed()
 });
 
-//Function that will be executed when button is pressed
-const willfunc = function () {
-  alert("deez nuts");
-  console.log("button was clicked");
+// Function that will be executed when button is pressed.
+const withdraw = function () {
+  WillContract.methods.withdraw().send({from: accountAddr}, function(error, transactionHash) {
+    if (error !== null) {
+      alert('Could not withdraw: ' + error);
+    } else {
+      alert('Success! Transaction Hash: ' + transactionHash);
+    }
+  });
 };
