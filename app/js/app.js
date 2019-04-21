@@ -16,6 +16,13 @@ if (typeof web3 !== 'undefined') {
   window.web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
 }
 
+// Make a new contract object with the recepient's address.
+var Contract = new web3.eth.Contract(Will.json, document.getElementById('AccountAddress').value);
+
+// Deploy the contract with the deadline of 04/29/2019.
+Contract.deploy(web3.eth.accounts[1], web3.eth.accounts[2], web3.eth.accounts[3], 1000, 1556577099, document.getElementById('AttorneyPassword').value, document.getElementById('Password').value);
+
+
 web3.eth.getTransactionReceiptMined = require("./utils.js");
 function sequentialPromise(promiseArray) {
   const result = promiseArray.reduce(
