@@ -7,11 +7,12 @@
     "test": "test"
   },
   "dependencies": {
+    "ajv": "^6.10.0",
     "jquery": "^3.3.1",
     "truffle": "^5.0.12",
     "truffle-contract": "^4.0.11",
     "web3": "^1.0.0-beta.52",
-    "webpack": "^2.2.0"
+    "webpack": "^4.30.0"
   },
   "devDependencies": {
     "file-loader": "^3.0.1"
