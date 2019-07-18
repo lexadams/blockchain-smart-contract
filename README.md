@@ -1,6 +1,6 @@
 # CSC 4700 - Project 1
 
-**Authors:** Mason Walton, Michal Christian, Lex Adams
+**Authors:** Lex Adams, Mason Walton, Michal Christian
 
 ## Getting Started
 
