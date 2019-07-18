@@ -7,9 +7,9 @@
 Clone the repo:
 
 ```
-git clone https://github.com/lexadams/blockchain-project.git
+git clone https://github.com/lexadams/blockchain-smart-contract.git
 # or
-git clone git@github.com:lexadams/blockchain-project.git
+git clone git@github.com:lexadams/blockchain-smart-contract.git
 ```
 
 Install dependencies:
